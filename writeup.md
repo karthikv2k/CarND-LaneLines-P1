@@ -11,6 +11,10 @@ The aim of the project is to detect lane lines on highways using traditional CV 
 [lines]: ./output_images/lines.png
 [lines_superimposed]: ./output_images/lines_superimposed.png
 [masked]: ./output_images/masked.png
+[concrete_roads]: ./output_images/concrete_roads.png 
+[problem_with_nearby_cars]: ./output_images/problem_with_nearby_cars.png
+[white]: ./output_videos/white.gif
+[white_debug]: ./output_videos/white_debug.gif
 
 ---
 
@@ -56,12 +60,20 @@ So far, we have used only standard transformations. But here, we use our custom 
 ![][lanes_debug]
 ![][lanes]
 
+### Output Videos
+#### With distribution of line segments for debugging
+![][white_debug]
+#### With detected lanes
+![][white]
 
 ### Potential shortcomings with our solution
 1. Doesn't perform well with concrete roads as the contrast between lanes and the road reduces
 2. It assumes the vehicle is always in the middle of the road
 3. Doesn't do well with curved lanes as basic approach is to fit a line not a curve
 4. Whenever there are cars nearby, it introduces lot of line segments that makes finding lane lines difficult
+5. Speed of this algorithm is not so good, getting only 7-11 frames per second
+![][concrete_roads]
+![][problem_with_nearby_cars]
 
 ### Possible improvements
 1. Account for curved lanes by fitting a curve rather than a line
