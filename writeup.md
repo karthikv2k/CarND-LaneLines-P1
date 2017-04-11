@@ -72,7 +72,13 @@ So far, we have used only standard transformations. But here, we use our custom 
 3. Doesn't do well with curved lanes as basic approach is to fit a line not a curve
 4. Whenever there are cars nearby, it introduces lot of line segments that makes finding lane lines difficult
 5. Speed of this algorithm is not so good, getting only 7-11 frames per second
+
+Problem with concrete roads.
+
 ![][concrete_roads]
+
+Problem with nearby cars.
+
 ![][problem_with_nearby_cars]
 
 ### Possible improvements
